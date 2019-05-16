@@ -18,8 +18,8 @@ public class Runner {
 
         EmployeeRepository repository = new EmployeeRepository(); // should only have one repository
         DataLoadController dataLoadController = new DataLoadController(repository);
-        EmployeeControllerImpl employeeController = new EmployeeControllerImpl(repository);
-        Boolean isRunning = true;
+       // EmployeeControllerImpl employeeController = new EmployeeControllerImpl(repository);
+//        Boolean isRunning = true;
         dataLoadController.load();
 
         System.out.println(repository);

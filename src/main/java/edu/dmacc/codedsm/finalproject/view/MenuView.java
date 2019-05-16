@@ -31,13 +31,16 @@ public class MenuView implements View {
             if (response.equals("4")) {
                 isRunning = false;
             } else if (response.equals("3")) {
-                // employeeController.processPayroll();
-                isRunning = false;
+                 employeeController.processPayroll();
             } else if (response.equals("2")) {
-                //employeeController.updateEmployeeHours();
+            	 System.out.println("Enter Employee Id ");
+            	 Integer id = Integer.parseInt(in.next());
+            	 System.out.println("Enter Hrs");
+            	 Integer hrs = Integer.parseInt(in.next());
+                 employeeController.updateEmployeeHours(id, hrs);
             } else if (response.equals("1"))
                 allEmployeeView.render(employees);
-        }
+            }
         File file = new File("payroll_results.txt");
 
         if (!file.exists()) {
